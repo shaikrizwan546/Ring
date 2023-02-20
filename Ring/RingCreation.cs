@@ -31,19 +31,20 @@ namespace Ring
             _tModel = teklaModelling;
             _pointList = new List<ContourPoint>();
 
-            //_startHeight = form.startHeight1;
-            //_endHeight = form.endHeight1;
-            //width = form.width1;
-            //stiffnerCount = form.stiffenercount1;
-            //tailingLeg = form.legangle;
+
+
+        _startHeight = _global.bottomRingStartHeight;
+      _endHeight = _global.topRingStartHeight;
+      width = _global.bottomRingWidth;
+      _stiffnerRingCount = 2;
+      stiffnerCount = _global.stiffenerCount;
+      tailingLeg = _global.tailingLugAngle;
 
 
 
 
 
-
-
-            CreateRing();
+    CreateRing();
             CreateStiffener();
         }
         /// <summary>
